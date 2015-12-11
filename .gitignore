@@ -1,0 +1,9 @@
+Library
+Temp
+.vs
+*.pidb
+*.sln
+*.userprefs
+*.csprog
+*.orig
+*.csproj

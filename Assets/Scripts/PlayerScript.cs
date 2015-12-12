@@ -34,7 +34,7 @@ public class PlayerScript : MonoBehaviour {
 
     void Update()
     {
-        if (Mathf.Abs(rb.velocity.x) >= 0.01) {
+        if (Mathf.Abs(rb.velocity.x) >= 0.01) {//TODO don't flip if facing nose tip
             sr.flipX = rb.velocity.x < 0;
         }
 

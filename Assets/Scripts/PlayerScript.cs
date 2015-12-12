@@ -2,36 +2,37 @@
 using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
-    public float speed = 1.0f;
-    public float gravity = 5.0f;
-    public Transform gravitySource;
+    public float speed = 1f;
+    public float airSpeed = 5f;
 
     Rigidbody2D rb;
-    Vector2 movementForce;
-    Vector2 gravityForce;
+    SpriteRenderer sr;
+
+    bool isGrounded = false;
+    public Transform groundCheck;
+    float groundRadius = 0.2f;
+    public LayerMask whatIsGround;
 
 	void Awake () {
         rb = GetComponent<Rigidbody2D>();
-	}
-	
-	void FixedUpdate () {
-        Vector2 distanceFromGravity = gravitySource.position - transform.position;
-        Vector2 gravityDirection = distanceFromGravity.normalized;
-        gravityForce = gravity * gravityDirection / distanceFromGravity.sqrMagnitude;
-
-        movementForce = speed * Input.GetAxis("Horizontal") * new Vector2(-gravityDirection.y, gravityDirection.x);
-
-        rb.AddForce(movementForce + gravityForce);
+        sr = GetComponent<SpriteRenderer>();
 	}
 
-    void OnDrawGizmos () {
-        Gizmos.color = Color.green;
-        Gizmos.DrawRay(transform.position, movementForce);
-        Gizmos.DrawRay(transform.position, gravityForce);
-        if (rb != null)
-        {
-            Gizmos.color = Color.magenta;
-            Gizmos.DrawRay(transform.position, rb.velocity);
+    void FixedUpdate() {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
+
+        float move = Input.GetAxis("Horizontal");
+        if (isGrounded) {
+            rb.velocity = new Vector2(speed * move, rb.velocity.y);
+        } else {
+            rb.AddForce(new Vector2(airSpeed * move, airSpeed * Input.GetAxis("Vertical")));
+        }
+    }
+
+    void Update()
+    {
+        if (Mathf.Abs(rb.velocity.x) >= 0.01) {
+            sr.flipX = rb.velocity.x < 0;
         }
     }
 }

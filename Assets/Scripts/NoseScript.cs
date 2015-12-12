@@ -51,7 +51,7 @@ public class NoseScript : MonoBehaviour {
             noseGlow.enabled = false;
         }
 
-        if (Input.GetMouseButtonDown(0) && !isNosing && canClimb) {
+        if (Input.GetMouseButton(0) && !isNosing && canClimb) {
             noseTip.enabled = true;
             noseTip.connectedAnchor = noseTipCollider.transform.position;
             isNosing = true;

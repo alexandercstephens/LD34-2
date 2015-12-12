@@ -11,7 +11,7 @@ public class NoseScript : MonoBehaviour {
     Rigidbody2D rb;
     SpriteRenderer sr;
 
-    bool isNosing;
+    public bool isNosing;
 
     void Awake() {
         rb = GetComponent<Rigidbody2D>();
@@ -22,8 +22,8 @@ public class NoseScript : MonoBehaviour {
 
     void FixedUpdate() {
         float realAngle = transform.rotation.eulerAngles.z;
-        if (!isNosing)
-        {
+        //if (!isNosing)
+        //{
             Vector2 diff = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
             float angle = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
 
@@ -36,7 +36,7 @@ public class NoseScript : MonoBehaviour {
             {
                 rb.angularVelocity = noseRotSpeed * (360 - angleDiff);
             }
-        }        
+        //}        
 
         sr.flipY = realAngle > 90 && realAngle < 270;        
     }

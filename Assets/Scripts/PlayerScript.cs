@@ -56,6 +56,6 @@ public class PlayerScript : MonoBehaviour {
     }
 
     public void GrowNose() {
-        nose.transform.localScale = new Vector3(1.5f * nose.transform.localScale.x, nose.transform.localScale.y, nose.transform.localScale.z);
+        nose.transform.localScale = new Vector3(2.5f * nose.transform.localScale.x, nose.transform.localScale.y, nose.transform.localScale.z);
     }
 }

@@ -70,4 +70,8 @@ public class NoseScript : MonoBehaviour {
             noseTip.connectedAnchor = anchor.transform.TransformPoint(anchorPoint);
         }
     }
+
+    //void OnDrawGizmos() {
+    //    Gizmos.DrawSphere(transform.TransformPoint(noseTip.anchor), noseTipRadius);
+    //}
 }

@@ -3,13 +3,16 @@ using System.Collections;
 
 public class NoseScript : MonoBehaviour {
     public HingeJoint2D noseTip;
-    public Collider2D noseTipCollider;
+    public CircleCollider2D noseTipCollider;
     public float noseRotSpeed = 5f;
     public LayerMask whatIsClimbable;
     public SpriteRenderer noseGlow;
 
     Rigidbody2D rb;
     SpriteRenderer sr;
+
+    Vector3 anchorPoint;
+    Collider2D anchor;
 
     public bool isNosing;
 
@@ -43,7 +46,8 @@ public class NoseScript : MonoBehaviour {
 
     void Update()
     {
-        bool canClimb = noseTipCollider.IsTouchingLayers(whatIsClimbable);
+        Collider2D overlap = Physics2D.OverlapCircle(noseTipCollider.transform.position, noseTipCollider.radius, whatIsClimbable);
+        bool canClimb = overlap != null;
         if (canClimb) {
             noseGlow.transform.position = noseTipCollider.transform.position;
             noseGlow.enabled = true;
@@ -53,11 +57,16 @@ public class NoseScript : MonoBehaviour {
 
         if (Input.GetMouseButton(0) && !isNosing && canClimb) {
             noseTip.enabled = true;
-            noseTip.connectedAnchor = noseTipCollider.transform.position;
+            anchorPoint = overlap.transform.InverseTransformPoint(noseTipCollider.transform.position);
+            anchor = overlap;
             isNosing = true;
         } else if (!Input.GetMouseButton(0) && isNosing) {
             noseTip.enabled = false;
             isNosing = false;
+        }
+
+        if (isNosing) {
+            noseTip.connectedAnchor = anchor.transform.TransformPoint(anchorPoint);
         }
     }
 }

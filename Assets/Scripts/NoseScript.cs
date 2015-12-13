@@ -49,12 +49,6 @@ public class NoseScript : MonoBehaviour {
         Vector3 noseTipPosition = transform.TransformPoint(noseTip.anchor);
         Collider2D overlap = Physics2D.OverlapCircle(noseTipPosition, noseTipRadius, whatIsClimbable);
         bool canClimb = overlap != null;
-        if (canClimb) {
-            noseGlow.transform.position = noseTipPosition;
-            noseGlow.enabled = true;
-        } else {
-            noseGlow.enabled = false;
-        }
 
         if (Input.GetMouseButton(0) && !isNosing && canClimb) {
             noseTip.enabled = true;
@@ -64,6 +58,17 @@ public class NoseScript : MonoBehaviour {
         } else if (!Input.GetMouseButton(0) && isNosing) {
             noseTip.enabled = false;
             isNosing = false;
+        }
+        if (canClimb) {
+            noseGlow.transform.position = noseTipPosition;
+            if (isNosing) {
+                noseGlow.color = Color.white;
+            } else {
+                noseGlow.color = Color.green;
+            }
+            noseGlow.enabled = true;
+        } else {
+            noseGlow.enabled = false;
         }
 
         if (isNosing) {

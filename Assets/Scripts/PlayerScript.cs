@@ -41,5 +41,12 @@ public class PlayerScript : MonoBehaviour {
         if (isGrounded && Input.GetKeyDown(KeyCode.Space)) {
             rb.AddForce(new Vector2(0, jumpForce));
         }
+
+        //if (Input.GetKeyDown(KeyCode.J))
+        //    GrowNose();
+    }
+
+    public void GrowNose() {
+        nose.transform.localScale = new Vector3(1.5f * nose.transform.localScale.x, nose.transform.localScale.y, nose.transform.localScale.z);
     }
 }

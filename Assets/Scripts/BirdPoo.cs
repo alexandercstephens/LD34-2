@@ -6,12 +6,17 @@ public class BirdPoo : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("Hit");
+        //Debug.Log("Hit");
         var rigidBody = GetComponent<Rigidbody2D>();
-        rigidBody.velocity = Vector3.zero;
-        rigidBody.angularVelocity = 0;
 
-        Destroy(gameObject, 2f);
+        if (rigidBody != null)
+        {
+            rigidBody.velocity = Vector3.zero;
+            rigidBody.angularVelocity = 0;
+
+            Destroy(rigidBody, 0.1f);
+            Destroy(gameObject, 2f);
+        }
     }
 
 }

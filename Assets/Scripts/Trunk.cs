@@ -20,7 +20,7 @@ public class Trunk : MonoBehaviour {
             newPiece.transform.SetParent(transform);
             newPiece.transform.localScale = Vector3.one;
 
-            Rigidbody2D rb = newPiece.GetComponent<Rigidbody2D>();
+            //Rigidbody2D rb = newPiece.GetComponent<Rigidbody2D>();
             FixedJoint2D hj = newPiece.GetComponent<FixedJoint2D>();
             Collider2D col = newPiece.GetComponent<Collider2D>();
 

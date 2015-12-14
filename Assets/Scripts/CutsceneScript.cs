@@ -6,6 +6,7 @@ public class CutsceneScript : MonoBehaviour {
     public Text billyText;
     public Text playerText;
     public NoseScript nose;
+    public Text tutorialText;
 
     void Start() {
         billyText.text = "This is Billy the elephant.";
@@ -45,10 +46,34 @@ public class CutsceneScript : MonoBehaviour {
         playerText.text = "Nice to meet you, Player1!";
         nose.GrowNose(6);
         Invoke("F5", 3f);
+        Invoke("T0", 1f);
     }
 
     void F5() {
         playerText.text = "";
+    }
+
+    void T0()
+    {
+        tutorialText.text = "Billy's trunk points toward your mouse cursor.";
+        Invoke("T1", 3f);
+    }
+
+    void T1()
+    {
+        tutorialText.text = "Hold the left mouse button to grapple terrain.";
+        Invoke("T2", 3f);
+    }
+
+    void T2()
+    {
+        tutorialText.text = "Use your fine motor skills to propel Billy!";
+        Invoke("T3", 3f);
+    }
+
+    void T3()
+    {
+        tutorialText.text = "";
     }
 
     //void F4() {

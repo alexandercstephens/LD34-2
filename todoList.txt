@@ -1,0 +1,15 @@
+more characters
+map background
+moving parts
+credits scene
+
+sound effects
+ui feedback on nose grow / nose length
+slowly grow nose
+
+things scattered about the level (pots, flowers, etc.)
+camera zoom out on nose grow
+
+music based on position
+enter your name instead of Player1
+choose lies to tell

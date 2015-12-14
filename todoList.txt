@@ -3,6 +3,7 @@ map background
 moving parts
 credits scene
 
+put in arrows
 sound effects
 ui feedback on nose grow / nose length
 slowly grow nose

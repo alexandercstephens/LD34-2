@@ -10,6 +10,7 @@ public class Credits : MonoBehaviour {
     void Start () {
         nextStopIndex = 0 ;
         isScrolling = true;
+        Physics2D.gravity = new Vector3(0f, 0f, 0f);
     }
 
     void Update () {

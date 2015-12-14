@@ -1,0 +1,225 @@
+fileFormatVersion: 2
+guid: d085b6a70363553409744f84c1613e1b
+timeCreated: 1450126137
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Squirl_0
+    21300002: Squirl_1
+    21300004: Squirl_2
+    21300006: Squirl_3
+    21300008: Squirl_4
+    21300010: Squirl_5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1200
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Squirl_0
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 2137
+        width: 714
+        height: 546
+      alignment: 9
+      pivot: {x: 0.7764691, y: 0.48936647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 56.10965, y: -99.59265}
+        - {x: 80.10965, y: -54.59265}
+        - {x: 80.10965, y: -33.59265}
+        - {x: 73.10965, y: -30.592651}
+        - {x: 37.10965, y: 22.407349}
+        - {x: 65.10965, y: 17.407349}
+        - {x: 77.10965, y: 15.407349}
+        - {x: 80.10965, y: 23.407349}
+        - {x: 80.10965, y: 33.40735}
+        - {x: 60.10965, y: 74.40735}
+        - {x: 55.10965, y: 78.40735}
+        - {x: -72.89035, y: 101.40735}
+        - {x: -136.89035, y: 129.40735}
+        - {x: -191.89035, y: 141.40735}
+        - {x: -232.89035, y: 141.40735}
+        - {x: -239.89035, y: 140.40735}
+        - {x: -266.89035, y: 91.40735}
+        - {x: -285.89035, y: 51.40735}
+        - {x: -290.89035, y: 18.407349}
+        - {x: -290.89035, y: -31.592651}
+        - {x: -283.89035, y: -61.59265}
+        - {x: -265.89035, y: -94.59265}
+        - {x: -240.89035, y: -111.59265}
+        - {x: -217.89035, y: -120.59265}
+        - {x: -213.89035, y: -121.59265}
+        - {x: -174.89035, y: -121.59265}
+        - {x: -150.89035, y: -119.59265}
+        - {x: -102.89035, y: -101.59265}
+        - {x: -23.89035, y: -87.59265}
+        - {x: 13.10965, y: -86.59265}
+      - - {x: -277.89035, y: -77.59265}
+        - {x: -274.89035, y: -76.59265}
+        - {x: -274.89035, y: -73.59265}
+        - {x: -277.89035, y: -72.59265}
+        - {x: -279.89035, y: -74.59265}
+    - name: Squirl_1
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 2126
+        width: 546
+        height: 534
+      alignment: 9
+      pivot: {x: 0.3511319, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 180.88434, y: -3.1152344}
+        - {x: 137.88434, y: 65.884766}
+        - {x: 100.88434, y: 91.884766}
+        - {x: 50.88434, y: 123.884766}
+        - {x: 28.884338, y: 135.88477}
+        - {x: -26.115662, y: 135.88477}
+        - {x: -54.11566, y: 125.884766}
+        - {x: -64.11566, y: 88.884766}
+        - {x: -59.11566, y: 41.884766}
+        - {x: -81.11566, y: 32.884766}
+        - {x: -81.11566, y: -28.115234}
+        - {x: -47.11566, y: -38.115234}
+        - {x: -64.11566, y: -78.115234}
+        - {x: -46.11566, y: -129.11523}
+        - {x: -31.115662, y: -141.11523}
+        - {x: 41.88434, y: -141.11523}
+        - {x: 98.88434, y: -107.115234}
+        - {x: 137.88434, y: -94.115234}
+        - {x: 180.88434, y: -65.115234}
+    - name: Squirl_2
+      rect:
+        serializedVersion: 2
+        x: 2001
+        y: 2927
+        width: 243
+        height: 203
+      alignment: 9
+      pivot: {x: 0.4044305, y: 0.38559908}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 61.18811, y: 36.427612}
+        - {x: 40.18811, y: 36.427612}
+        - {x: -16.81189, y: 27.427612}
+        - {x: -20.81189, y: 26.427612}
+        - {x: -20.81189, y: -36.572388}
+        - {x: -9.81189, y: -36.572388}
+        - {x: 12.18811, y: -29.572388}
+        - {x: 55.18811, y: -3.5723877}
+        - {x: 62.18811, y: 14.427612}
+        - {x: 62.18811, y: 33.427612}
+    - name: Squirl_3
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 1505
+        width: 546
+        height: 383
+      alignment: 9
+      pivot: {x: 0.49999976, y: 0.5303177}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4.369507, y: 75.113464}
+        - {x: -48.630493, y: 52.113464}
+        - {x: -82.63049, y: 9.113464}
+        - {x: -82.63049, y: -21.886536}
+        - {x: -52.630493, y: -54.886536}
+        - {x: -24.630493, y: -60.886536}
+        - {x: 86.36951, y: -60.886536}
+        - {x: 106.36951, y: -12.886536}
+        - {x: 106.36951, y: 72.113464}
+        - {x: 102.36951, y: 75.113464}
+    - name: Squirl_4
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 1452
+        width: 424
+        height: 343
+      alignment: 9
+      pivot: {x: 0.80124724, y: 0.72004724}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -101.85884, y: 31.918884}
+        - {x: -147.85884, y: -9.081116}
+        - {x: -147.85884, y: -70.081116}
+        - {x: -83.85884, y: -70.081116}
+        - {x: 24.14116, y: -42.081116}
+        - {x: 31.14116, y: -28.081116}
+        - {x: 31.14116, y: 31.918884}
+      - - {x: -96.85884, y: 16.918884}
+        - {x: -93.85884, y: 17.918884}
+        - {x: -93.85884, y: 20.918884}
+        - {x: -96.85884, y: 21.918884}
+        - {x: -98.85884, y: 19.918884}
+    - name: Squirl_5
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 2892
+        width: 517
+        height: 238
+      alignment: 9
+      pivot: {x: 0.73582757, y: 0.4268173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12.976669, y: 40.592285}
+        - {x: -157.02333, y: 40.592285}
+        - {x: -162.02333, y: 20.592285}
+        - {x: -162.02333, y: -26.407715}
+        - {x: -149.02333, y: -43.407715}
+        - {x: -89.02333, y: -43.407715}
+        - {x: -17.02333, y: -40.407715}
+        - {x: 21.97667, y: -35.407715}
+        - {x: 28.97667, y: -17.407715}
+        - {x: 28.97667, y: 21.592285}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

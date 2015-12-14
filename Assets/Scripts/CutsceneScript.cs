@@ -6,10 +6,9 @@ public class CutsceneScript : MonoBehaviour {
     public Text billyText;
     public Text playerText;
     public NoseScript nose;
-    public Text steveText;
 
     void Start() {
-        billyText.text = "His name is Billy.";
+        billyText.text = "This is Billy the elephant.";
         Invoke("F0", 2f);
     }
 
@@ -27,17 +26,16 @@ public class CutsceneScript : MonoBehaviour {
     }
 
     void F1() {
-        billyText.text = "Every time he lies to someone to whom he's never lied before, his nose grows longer.";
+        billyText.text = "Every time he lies to someone to whom he's never lied before, his trunk grows longer.";
         Invoke("F2", 3f);
     }
 
     void F2() {
-        billyText.text = "He's lived a pretty honest life so far.";
+        billyText.text = "He has a normally-sized trunk because he's lived a pretty honest life so far.";
         Invoke("F3", 3f);
     }
 
     void F3() {
-        billyText.color = Color.red;
         billyText.text = "But you control him now.";
         Invoke("F4", 3f);
     }

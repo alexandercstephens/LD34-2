@@ -7,9 +7,12 @@ public class NoseScript : MonoBehaviour {
     public float noseRotSpeed = 5f;
     public LayerMask whatIsClimbable;
     public SpriteRenderer noseGlow;
+    public int initialTrunkSegments;
+    public Transform trunkSegmentBase;
+    public GameObject trunkSegment;
+    public GameObject trunkTip;
 
     Rigidbody2D rb;
-    SpriteRenderer sr;
 
     Vector3 anchorPoint;
     Collider2D anchor;
@@ -18,9 +21,23 @@ public class NoseScript : MonoBehaviour {
 
     void Awake() {
         rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
         noseTip.enabled = false;
         noseGlow.enabled = false;
+    }
+
+    void Start() {
+        Transform topSegment = trunkSegmentBase;
+        for (var i = 0; i < initialTrunkSegments; i++) {
+            noseTip.anchor += new Vector2(0.055f, 0f);
+
+            GameObject newSegment = (GameObject)Instantiate(trunkSegment, topSegment.position, topSegment.rotation);
+            newSegment.transform.parent = topSegment;
+            newSegment.transform.localPosition += new Vector3(0.0003f, -0.0534f, 0f);
+            topSegment = newSegment.transform;
+        }
+        GameObject tip = (GameObject)Instantiate(trunkTip, topSegment.position, topSegment.rotation);
+        tip.transform.parent = topSegment;
+        tip.transform.localPosition += new Vector3(-0.00259996f, -0.05260085f, 0f);
     }
 
     void FixedUpdate() {
@@ -39,9 +56,7 @@ public class NoseScript : MonoBehaviour {
             {
                 rb.angularVelocity = noseRotSpeed * (360 - angleDiff);
             }
-        //}        
-
-        sr.flipY = realAngle > 90 && realAngle < 270;        
+        //}
     }
 
     void Update()

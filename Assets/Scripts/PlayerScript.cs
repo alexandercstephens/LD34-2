@@ -16,7 +16,7 @@ public class PlayerScript : MonoBehaviour {
     //public LayerMask whatIsGround;
 
 	void Awake () {
-        //rb = GetComponent<Rigidbody2D>();
+        var rb = GetComponent<Rigidbody2D>();
         //sr = GetComponent<SpriteRenderer>();
         nose = GetComponentInChildren<NoseScript>();
 	}
@@ -46,7 +46,7 @@ public class PlayerScript : MonoBehaviour {
         //    GrowNose();
     }
 
-    public void GrowNose() {
-        nose.transform.localScale = new Vector3(2.5f * nose.transform.localScale.x, nose.transform.localScale.y, nose.transform.localScale.z);
-    }
+    //public void GrowNose() {
+    //    nose.transform.localScale = new Vector3(2.5f * nose.transform.localScale.x, nose.transform.localScale.y, nose.transform.localScale.z);
+    //}
 }

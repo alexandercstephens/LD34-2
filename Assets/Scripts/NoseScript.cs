@@ -22,6 +22,7 @@ public class NoseScript : MonoBehaviour {
     List<GameObject> trunkSegments;
 
     public bool isNosing;
+    public bool isExtended;
 
     void Awake() {
         rb = trunkBase.GetComponent<Rigidbody2D>();
@@ -44,11 +45,11 @@ public class NoseScript : MonoBehaviour {
             float angleDiff = (realAngle - angle) % 360;
             if (angleDiff < 180)
             {
-                rb.angularVelocity = -noseRotSpeed * angleDiff;
+                rb.angularVelocity = -noseRotSpeed * angleDiff * noseLength;
             }
             else
             {
-                rb.angularVelocity = noseRotSpeed * (360 - angleDiff);
+                rb.angularVelocity = noseRotSpeed * (360 - angleDiff) * noseLength;
             }
         }
     }
@@ -56,6 +57,8 @@ public class NoseScript : MonoBehaviour {
     void Update()
     {
         if (Input.GetMouseButton(0)) {
+            isExtended = true;
+
             Vector2 basePos2d = new Vector2(trunkBase.transform.position.x, trunkBase.transform.position.y);
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 diff = Vector2.ClampMagnitude(mousePos - basePos2d, noseLength);
@@ -96,13 +99,42 @@ public class NoseScript : MonoBehaviour {
             //if (!isNosing) {
                 trunkBase.transform.rotation = Quaternion.Euler(trunkBase.transform.eulerAngles.x, trunkBase.transform.eulerAngles.y, angle);
             //}       
-        } else {
+        } else // if (isNosing)
+        {
+            //if (isNosing)
+            //{
+            //    //var k = 0;
+            //    //for (; k < trunkSegments.Count; k++) {
+            //    //    if (trunkSegments[k].GetComponent<CircleCollider2D>().IsTouchingLayers(whatIsClimbable))
+            //    //    {
+            //    //        break;
+            //    //    }
+            //    //}
+            //    //if (k < trunkSegments.Count)
+            //    //{
+            //    //    var goodPosition = trunkSegments[k - 1].transform.position;
+            //    //    for (; k < trunkSegments.Count; k++)
+            //    //    {
+            //    //        trunkSegments[k].transform.position = goodPosition;
+            //    //    }
+            //    //}
+            //}
+            if (isExtended)
+            {
+
+                for (var i = 0; i < trunkSegments.Count; i++)
+                {
+                    trunkSegments[i].transform.position = trunkBase.transform.position;
+                }
+                trunkTip.transform.position = trunkBase.transform.position;
+            }
+            isExtended = false;
             isNosing = false;
             noseTip.enabled = false;
             for (var i = 0; i < trunkSegments.Count; i++) {
                 trunkSegments[i].GetComponent<FixedJoint2D>().enabled = true;
             }
-            trunkTip.GetComponent<FixedJoint2D>().enabled = true;
+            trunkTip.GetComponent<FixedJoint2D>().enabled = true;            
         }
     }
 
@@ -117,17 +149,17 @@ public class NoseScript : MonoBehaviour {
             
             FixedJoint2D j = newSegment.GetComponent<FixedJoint2D>();
             j.connectedBody = topSegment.GetComponent<Rigidbody2D>();
-            j.connectedAnchor = new Vector2(0.06800079f, 0f);
+            j.connectedAnchor = new Vector2(0.055f, 0f);
             j.anchor = new Vector2(0f, 0f);
             
             topSegment = newSegment.transform;
             trunkSegments.Add(newSegment);
         }
         trunkTip.transform.position = topSegment.position;
-        trunkTip.transform.localPosition += new Vector3(0.06800079f, -0f, 0f);
+        trunkTip.transform.localPosition += new Vector3(0.055f, -0f, 0f);
         
         FixedJoint2D ttj = trunkTip.GetComponent<FixedJoint2D>();
         ttj.connectedBody = topSegment.GetComponent<Rigidbody2D>();
-        ttj.connectedAnchor = new Vector2(0.06800079f, 0f);
+        ttj.connectedAnchor = new Vector2(0.055f, 0f);
     }
 }

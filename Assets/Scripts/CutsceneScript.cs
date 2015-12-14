@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class CutsceneScript : MonoBehaviour {
     public Text billyText;
     public Text playerText;
-    public PlayerScript player;
+    public NoseScript nose;
     public Text steveText;
 
     void Start() {
@@ -45,7 +45,7 @@ public class CutsceneScript : MonoBehaviour {
     void F4() {
         billyText.text = "";
         playerText.text = "Nice to meet you, Player1!";
-        player.GrowNose();
+        nose.GrowNose(6);
         Invoke("F5", 3f);
     }
 

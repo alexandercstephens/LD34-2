@@ -7,8 +7,7 @@ public class npcScript : MonoBehaviour {
     public string[] responseDialogues;
     public LayerMask playerLayer;
     public Text playerText;
-    public NoseScript nose;
-    public int growAmount = 6;
+    public PlayerScript player;
 
     Collider2D col;
     Text text;
@@ -26,7 +25,7 @@ public class npcScript : MonoBehaviour {
             playerText.text = playerDialogue;
             InvokeRepeating("GiveThanks", 1.5f, 3f);
             Invoke("CancelPlayerText", 1.5f);
-            nose.GrowNose(growAmount);
+            player.GrowNose();
         }
 	}
 

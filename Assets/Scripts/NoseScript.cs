@@ -8,6 +8,7 @@ public class NoseScript : MonoBehaviour {
     public LayerMask whatIsClimbable;
     public SpriteRenderer noseGlow;
     public int initialTrunkSegments;
+    public Transform trunkSegmentBase;
     public GameObject trunkSegment;
     public GameObject trunkTip;
 
@@ -25,7 +26,18 @@ public class NoseScript : MonoBehaviour {
     }
 
     void Start() {
-        GrowNose(initialTrunkSegments);
+        Transform topSegment = trunkSegmentBase;
+        for (var i = 0; i < initialTrunkSegments; i++) {
+            noseTip.anchor += new Vector2(0.055f, 0f);
+
+            GameObject newSegment = (GameObject)Instantiate(trunkSegment, topSegment.position, topSegment.rotation);
+            newSegment.transform.parent = topSegment;
+            newSegment.transform.localPosition += new Vector3(0.0003f, -0.0534f, 0f);
+            topSegment = newSegment.transform;
+        }
+        GameObject tip = (GameObject)Instantiate(trunkTip, topSegment.position, topSegment.rotation);
+        tip.transform.parent = topSegment;
+        tip.transform.localPosition += new Vector3(-0.00259996f, -0.05260085f, 0f);
     }
 
     void FixedUpdate() {
@@ -77,22 +89,6 @@ public class NoseScript : MonoBehaviour {
         if (isNosing) {
             noseTip.connectedAnchor = anchor.transform.TransformPoint(anchorPoint);
         }
-    }
-
-    public void GrowNose(int n) {
-        Transform topSegment = trunkTip.transform.parent;
-        for (var i = 0; i < n; i++)
-        {
-            noseTip.anchor += new Vector2(0.055f, 0f);
-
-            GameObject newSegment = (GameObject)Instantiate(trunkSegment, topSegment.position, topSegment.rotation);
-            newSegment.transform.parent = topSegment;
-            newSegment.transform.localPosition += new Vector3(0.0003f, -0.0534f, 0f);
-            topSegment = newSegment.transform;
-        }
-        trunkTip.transform.parent = topSegment;
-        trunkTip.transform.position = topSegment.position;
-        trunkTip.transform.localPosition += new Vector3(-0.00259996f, -0.05260085f, 0f);
     }
 
     //void OnDrawGizmos() {

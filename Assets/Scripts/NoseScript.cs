@@ -9,7 +9,11 @@ public class NoseScript : MonoBehaviour {
     public LayerMask whatIsClimbable;
     public SpriteRenderer noseGlow;
     public int initialTrunkSegments;
+<<<<<<< HEAD
     public GameObject trunkBase;
+=======
+    public Transform trunkSegmentBase;
+>>>>>>> 5fc52845a00c138eacc1409c4198b573c4b8eb6a
     public GameObject trunkSegment;
     public GameObject trunkTip;
 
@@ -31,7 +35,18 @@ public class NoseScript : MonoBehaviour {
     }
 
     void Start() {
-        GrowNose(initialTrunkSegments);
+        Transform topSegment = trunkSegmentBase;
+        for (var i = 0; i < initialTrunkSegments; i++) {
+            noseTip.anchor += new Vector2(0.055f, 0f);
+
+            GameObject newSegment = (GameObject)Instantiate(trunkSegment, topSegment.position, topSegment.rotation);
+            newSegment.transform.parent = topSegment;
+            newSegment.transform.localPosition += new Vector3(0.0003f, -0.0534f, 0f);
+            topSegment = newSegment.transform;
+        }
+        GameObject tip = (GameObject)Instantiate(trunkTip, topSegment.position, topSegment.rotation);
+        tip.transform.parent = topSegment;
+        tip.transform.localPosition += new Vector3(-0.00259996f, -0.05260085f, 0f);
     }
 
     void FixedUpdate() {
@@ -107,6 +122,7 @@ public class NoseScript : MonoBehaviour {
         }
     }
 
+<<<<<<< HEAD
     public void GrowNose(int n) {
         Transform topSegment = trunkTip.GetComponent<FixedJoint2D>().connectedBody.transform;
         for (var i = 0; i < n; i++)
@@ -131,4 +147,9 @@ public class NoseScript : MonoBehaviour {
         ttj.connectedBody = topSegment.GetComponent<Rigidbody2D>();
         ttj.connectedAnchor = new Vector2(0.06800079f, 0f);
     }
+=======
+    //void OnDrawGizmos() {
+    //    Gizmos.DrawSphere(transform.TransformPoint(noseTip.anchor), noseTipRadius);
+    //}
+>>>>>>> 5fc52845a00c138eacc1409c4198b573c4b8eb6a
 }

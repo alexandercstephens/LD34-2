@@ -1,0 +1,156 @@
+fileFormatVersion: 2
+guid: e708b07bbefedb14daeaddc3373bd365
+timeCreated: 1450120312
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MushroomPlatforms_0
+    21300002: MushroomPlatforms_1
+    21300004: MushroomPlatforms_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 450
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: MushroomPlatforms_0
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1221
+        width: 343
+        height: 758
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44.825836, y: 154.669}
+        - {x: 40.825836, y: 181.669}
+        - {x: -8.174164, y: 181.669}
+        - {x: -50.174164, y: 65.66901}
+        - {x: -50.174164, y: -104.33099}
+        - {x: -39.174164, y: -160.331}
+        - {x: 11.825836, y: -189.331}
+        - {x: 38.825836, y: -189.331}
+        - {x: 39.825836, y: -177.331}
+        - {x: 40.825836, y: -96.33099}
+        - {x: 44.825836, y: 21.669006}
+      - - {x: -49.174164, y: 39.669006}
+        - {x: -47.174164, y: 37.669006}
+        - {x: -44.174164, y: 38.669006}
+        - {x: -44.174164, y: 42.669006}
+        - {x: -46.174164, y: 44.669006}
+        - {x: -49.174164, y: 43.669006}
+      - - {x: 44.825836, y: 111.66901}
+        - {x: 46.825836, y: 109.66901}
+        - {x: 49.825836, y: 110.66901}
+        - {x: 49.825836, y: 114.66901}
+        - {x: 47.825836, y: 116.66901}
+        - {x: 44.825836, y: 115.66901}
+    - name: MushroomPlatforms_1
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 2311
+        width: 231
+        height: 419
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11.363312, y: -112.28662}
+        - {x: 14.363312, y: -111.28662}
+        - {x: 14.363312, y: -108.28662}
+        - {x: 11.363312, y: -107.28662}
+        - {x: 9.363312, y: -109.28662}
+      - - {x: 2.3633118, y: -104.28662}
+        - {x: 3.3633118, y: -107.28662}
+        - {x: 8.363312, y: -107.28662}
+        - {x: 10.363312, y: -105.28662}
+        - {x: 9.363312, y: -102.28662}
+        - {x: 4.363312, y: -102.28662}
+      - - {x: -41.63669, y: 113.71338}
+        - {x: -43.63669, y: 96.71338}
+        - {x: -43.63669, y: -102.28662}
+        - {x: 36.36331, y: -102.28662}
+        - {x: 45.36331, y: -89.28662}
+        - {x: 45.36331, y: 103.71338}
+        - {x: 44.36331, y: 113.71338}
+      - - {x: -43.63669, y: 21.713379}
+        - {x: -40.63669, y: 22.713379}
+        - {x: -40.63669, y: 25.713379}
+        - {x: -43.63669, y: 26.713379}
+        - {x: -45.63669, y: 24.713379}
+    - name: MushroomPlatforms_2
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 2374
+        width: 305
+        height: 554
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13.322205, y: 147.78479}
+        - {x: -36.677795, y: 147.78479}
+        - {x: -39.677795, y: 146.78479}
+        - {x: -58.677795, y: 107.78479}
+        - {x: -63.677795, y: 94.78479}
+        - {x: -63.677795, y: -21.21521}
+        - {x: -57.677795, y: -91.21521}
+        - {x: -31.677795, y: -134.21521}
+        - {x: 32.322205, y: -134.21521}
+        - {x: 66.322205, y: -124.21521}
+        - {x: 66.322205, y: 45.78479}
+        - {x: 41.322205, y: 125.78479}
+      - - {x: -37.677795, y: -112.21521}
+        - {x: -34.677795, y: -111.21521}
+        - {x: -34.677795, y: -108.21521}
+        - {x: -37.677795, y: -107.21521}
+        - {x: -39.677795, y: -109.21521}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -8,7 +8,6 @@ public class BirdAI : MonoBehaviour
     private Rigidbody2D rigidBody;
     public Vector2 LiftingForce;
     private float startY;
-    public LayerMask ToDetect;
     public GameObject Poo;
 
     // Use this for initialization
@@ -32,10 +31,13 @@ public class BirdAI : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        Debug.Log("Poo due to " + col.gameObject.name);
         // Start pooping
         var poo =(GameObject) Instantiate(Poo, transform.position, Quaternion.identity);
         var pooRigidBody = poo.GetComponent<Rigidbody2D>();
         pooRigidBody.velocity = new Vector2(rigidBody.velocity.x, 0);
+        var audioSource = rigidBody.GetComponent<AudioSource>();
+        audioSource.Play();
     }
 
 }

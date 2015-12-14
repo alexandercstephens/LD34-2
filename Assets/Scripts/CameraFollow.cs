@@ -46,8 +46,8 @@ public class CameraFollow : MonoBehaviour
         var cameraHalfWidth = camera.orthographicSize * ((float)Screen.width / Screen.height);
 
         //todo: make the stupid bounding box work, it interferes with the player's movement currently
-        //x = Mathf.Clamp(x, _min.x + cameraHalfWidth, _max.x - cameraHalfWidth);
-        //y = Mathf.Clamp(y, _min.y + camera.orthographicSize, _max.y - camera.orthographicSize);
+        x = Mathf.Clamp(x, _min.x + cameraHalfWidth, _max.x - cameraHalfWidth);
+        y = Mathf.Clamp(y, _min.y + camera.orthographicSize, _max.y - camera.orthographicSize);
 
         transform.position = new Vector3(x, y, transform.position.z);
     }

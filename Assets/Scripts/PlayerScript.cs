@@ -21,15 +21,6 @@ public class PlayerScript : MonoBehaviour {
         nose = GetComponentInChildren<NoseScript>();
 	}
 
-    void Start () {
-        Collider2D[] colliders = GetComponentsInChildren<Collider2D>();
-        for (var i=0; i < colliders.Length; i++) {
-            for (var j = 0; j < colliders.Length; j++) {
-                Physics2D.IgnoreCollision(colliders[i], colliders[j]);
-            }
-        }
-    }
-
     void FixedUpdate() {
         //isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
 

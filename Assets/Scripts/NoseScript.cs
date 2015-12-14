@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class NoseScript : MonoBehaviour {
     public HingeJoint2D noseTip;
@@ -8,6 +9,7 @@ public class NoseScript : MonoBehaviour {
     public LayerMask whatIsClimbable;
     public SpriteRenderer noseGlow;
     public int initialTrunkSegments;
+    public GameObject trunkBase;
     public GameObject trunkSegment;
     public GameObject trunkTip;
 
@@ -15,13 +17,17 @@ public class NoseScript : MonoBehaviour {
 
     Vector3 anchorPoint;
     Collider2D anchor;
+    float noseLength = 0f;
+
+    List<GameObject> trunkSegments;
 
     public bool isNosing;
 
     void Awake() {
-        rb = GetComponent<Rigidbody2D>();
+        rb = trunkBase.GetComponent<Rigidbody2D>();
         noseTip.enabled = false;
         noseGlow.enabled = false;
+        trunkSegments = new List<GameObject>();
     }
 
     void Start() {
@@ -30,11 +36,11 @@ public class NoseScript : MonoBehaviour {
 
     void FixedUpdate() {
         float realAngle = transform.rotation.eulerAngles.z;
-        //if (!isNosing)
-        //{
+        if (isNosing)
+        {
             Vector2 diff = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
             float angle = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-
+            
             float angleDiff = (realAngle - angle) % 360;
             if (angleDiff < 180)
             {
@@ -44,58 +50,85 @@ public class NoseScript : MonoBehaviour {
             {
                 rb.angularVelocity = noseRotSpeed * (360 - angleDiff);
             }
-        //}
+            Debug.Log(rb.angularVelocity);
+        }
     }
 
     void Update()
     {
-        Vector3 noseTipPosition = transform.TransformPoint(noseTip.anchor);
-        Collider2D overlap = Physics2D.OverlapCircle(noseTipPosition, noseTipRadius, whatIsClimbable);
-        bool canClimb = overlap != null;
+        if (Input.GetMouseButton(0)) {
+            Vector2 basePos2d = new Vector2(trunkBase.transform.position.x, trunkBase.transform.position.y);
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 diff = Vector2.ClampMagnitude(mousePos - basePos2d, noseLength);
+            Vector2 finalPos = basePos2d + diff;
+            //Vector2 finalPos = mousePos;
 
-        if (Input.GetMouseButton(0) && !isNosing && canClimb) {
-            noseTip.enabled = true;
-            anchorPoint = overlap.transform.InverseTransformPoint(noseTipPosition);
-            anchor = overlap;
-            isNosing = true;
-        } else if (!Input.GetMouseButton(0) && isNosing) {
-            noseTip.enabled = false;
-            isNosing = false;
-        }
-        if (canClimb) {
-            noseGlow.transform.position = noseTipPosition;
-            if (isNosing) {
-                noseGlow.color = Color.white;
-            } else {
-                noseGlow.color = Color.green;
+            if (!isNosing) {
+                Collider2D overlap = Physics2D.OverlapCircle(finalPos, noseTipRadius, whatIsClimbable);
+                if (overlap != null)
+                {
+                    isNosing = true;
+                    noseTip.anchor = new Vector2(diff.magnitude, 0f);
+                    noseTip.enabled = true;
+                    anchorPoint = overlap.transform.InverseTransformPoint(finalPos);
+                    anchor = overlap;
+                }
             }
-            noseGlow.enabled = true;
-        } else {
-            noseGlow.enabled = false;
-        }
+            
+            if (isNosing) {
+                  noseTip.connectedAnchor = anchor.transform.TransformPoint(anchorPoint);
+                  finalPos = noseTip.connectedAnchor;
+                  diff = finalPos - basePos2d;
+            }
 
-        if (isNosing) {
-            noseTip.connectedAnchor = anchor.transform.TransformPoint(anchorPoint);
+            float angle = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+
+            float per = diff.magnitude / (float)trunkSegments.Count;
+            for (var i = 0; i < trunkSegments.Count; i++)
+            {
+                trunkSegments[i].GetComponent<FixedJoint2D>().enabled = false;
+                trunkSegments[i].transform.localPosition = new Vector3(i * per, 0f, 0f);
+                trunkSegments[i].transform.localRotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
+            }
+            trunkTip.GetComponent<FixedJoint2D>().enabled = false;
+            trunkTip.transform.localPosition = new Vector3(trunkSegments.Count * per, 0f, 0f);
+            trunkTip.transform.localRotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
+
+            //if (!isNosing) {
+                trunkBase.transform.rotation = Quaternion.Euler(trunkBase.transform.eulerAngles.x, trunkBase.transform.eulerAngles.y, angle);
+            //}       
+        } else {
+            isNosing = false;
+            noseTip.enabled = false;
+            for (var i = 0; i < trunkSegments.Count; i++) {
+                trunkSegments[i].GetComponent<FixedJoint2D>().enabled = true;
+            }
+            trunkTip.GetComponent<FixedJoint2D>().enabled = true;
         }
     }
 
     public void GrowNose(int n) {
-        Transform topSegment = trunkTip.transform.parent;
+        Transform topSegment = trunkTip.GetComponent<FixedJoint2D>().connectedBody.transform;
         for (var i = 0; i < n; i++)
         {
-            noseTip.anchor += new Vector2(0.055f, 0f);
+            noseLength += 0.055f;
 
             GameObject newSegment = (GameObject)Instantiate(trunkSegment, topSegment.position, topSegment.rotation);
-            newSegment.transform.parent = topSegment;
-            newSegment.transform.localPosition += new Vector3(0.0003f, -0.0534f, 0f);
+            newSegment.transform.parent = transform;
+            
+            FixedJoint2D j = newSegment.GetComponent<FixedJoint2D>();
+            j.connectedBody = topSegment.GetComponent<Rigidbody2D>();
+            j.connectedAnchor = new Vector2(0.06800079f, 0f);
+            j.anchor = new Vector2(0f, 0f);
+            
             topSegment = newSegment.transform;
+            trunkSegments.Add(newSegment);
         }
-        trunkTip.transform.parent = topSegment;
         trunkTip.transform.position = topSegment.position;
-        trunkTip.transform.localPosition += new Vector3(-0.00259996f, -0.05260085f, 0f);
+        trunkTip.transform.localPosition += new Vector3(0.06800079f, -0f, 0f);
+        
+        FixedJoint2D ttj = trunkTip.GetComponent<FixedJoint2D>();
+        ttj.connectedBody = topSegment.GetComponent<Rigidbody2D>();
+        ttj.connectedAnchor = new Vector2(0.06800079f, 0f);
     }
-
-    //void OnDrawGizmos() {
-    //    Gizmos.DrawSphere(transform.TransformPoint(noseTip.anchor), noseTipRadius);
-    //}
 }

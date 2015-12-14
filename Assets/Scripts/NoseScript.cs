@@ -50,7 +50,6 @@ public class NoseScript : MonoBehaviour {
             {
                 rb.angularVelocity = noseRotSpeed * (360 - angleDiff);
             }
-            Debug.Log(rb.angularVelocity);
         }
     }
 

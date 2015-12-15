@@ -35,10 +35,10 @@ public class TreeInside : MonoBehaviour {
             enterText.enabled = true;
             if (!treeInside.activeSelf)
             {
-                enterText.text = "Press SPACE to Enter";
+                enterText.text = "Press Space to Enter";
             } else
             {
-                enterText.text = "Press SPACE to Exit";
+                enterText.text = "Press Space to Exit";
             }
         } else
         {

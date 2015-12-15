@@ -55,13 +55,13 @@ public class CutsceneScript : MonoBehaviour {
 
     void T0()
     {
-        tutorialText.text = "Billy's trunk points toward your mouse cursor.";
+        tutorialText.text = "Hold the left mouse button to aim Billy's trunk.";
         Invoke("T1", 3f);
     }
 
     void T1()
     {
-        tutorialText.text = "Hold the left mouse button to grapple terrain.";
+        tutorialText.text = "Touch terrain with the end of his trunk to grapple it.";
         Invoke("T2", 3f);
     }
 

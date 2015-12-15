@@ -101,33 +101,33 @@ public class NoseScript : MonoBehaviour {
             //}       
         } else // if (isNosing)
         {
-            //if (isNosing)
-            //{
-            //    //var k = 0;
-            //    //for (; k < trunkSegments.Count; k++) {
-            //    //    if (trunkSegments[k].GetComponent<CircleCollider2D>().IsTouchingLayers(whatIsClimbable))
-            //    //    {
-            //    //        break;
-            //    //    }
-            //    //}
-            //    //if (k < trunkSegments.Count)
-            //    //{
-            //    //    var goodPosition = trunkSegments[k - 1].transform.position;
-            //    //    for (; k < trunkSegments.Count; k++)
-            //    //    {
-            //    //        trunkSegments[k].transform.position = goodPosition;
-            //    //    }
-            //    //}
-            //}
-            if (isExtended)
+            if (isNosing)
             {
-
-                for (var i = 0; i < trunkSegments.Count; i++)
-                {
-                    trunkSegments[i].transform.position = trunkBase.transform.position;
+                var k = 0;
+                for (; k < trunkSegments.Count; k++) {
+                    if (trunkSegments[k].GetComponent<CircleCollider2D>().IsTouchingLayers(whatIsClimbable))
+                    {
+                        break;
+                    }
                 }
-                trunkTip.transform.position = trunkBase.transform.position;
+                if (k < trunkSegments.Count)
+                {
+                    var goodPosition = trunkSegments[k - 1].transform.position;
+                    for (; k < trunkSegments.Count; k++)
+                    {
+                        trunkSegments[k].transform.position = goodPosition;
+                    }
+                }
             }
+            //if (isExtended)
+            //{
+            //
+            //    for (var i = 0; i < trunkSegments.Count; i++)
+            //    {
+            //        trunkSegments[i].transform.position = trunkBase.transform.position;
+            //    }
+            //    trunkTip.transform.position = trunkBase.transform.position;
+            //}
             isExtended = false;
             isNosing = false;
             noseTip.enabled = false;

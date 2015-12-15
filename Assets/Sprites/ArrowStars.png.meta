@@ -1,0 +1,162 @@
+fileFormatVersion: 2
+guid: 75a7d336e0486c948b3f8fc0ed008355
+timeCreated: 1450142376
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ArrowStars_0
+    21300002: ArrowStars_1
+    21300004: ArrowStars_2
+    21300006: ArrowStars_3
+    21300008: ArrowStars_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 450
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: ArrowStars_0
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1055
+        width: 258
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54.566116, y: 47.171387}
+        - {x: -54.566116, y: -41.828613}
+        - {x: -11.566116, y: -51.828613}
+        - {x: 35.433884, y: -51.828613}
+        - {x: 57.433884, y: -43.828613}
+        - {x: 57.433884, y: 30.171387}
+        - {x: 51.433884, y: 47.171387}
+    - name: ArrowStars_1
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 1325
+        width: 328
+        height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50.24881, y: 3.6915894}
+        - {x: 24.24881, y: 58.69159}
+        - {x: -56.75119, y: 58.69159}
+        - {x: -72.75119, y: 55.69159}
+        - {x: -72.75119, y: -28.30841}
+        - {x: -66.75119, y: -56.30841}
+        - {x: 29.24881, y: -56.30841}
+        - {x: 64.24881, y: -23.30841}
+        - {x: 67.24881, y: -17.30841}
+        - {x: 67.24881, y: -7.3084106}
+    - name: ArrowStars_2
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 817
+        width: 295
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.512085, y: 47.735107}
+        - {x: -53.512085, y: 16.735107}
+        - {x: -53.512085, y: -40.264893}
+        - {x: -48.512085, y: -42.264893}
+        - {x: 50.487915, y: -42.264893}
+        - {x: 50.487915, y: 29.735107}
+        - {x: 22.487915, y: 47.735107}
+    - name: ArrowStars_3
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 600
+        width: 287
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.7117, y: 63.8226}
+        - {x: 16.7117, y: 62.8226}
+        - {x: -47.2883, y: 52.8226}
+        - {x: -53.2883, y: 42.8226}
+        - {x: -54.2883, y: 38.8226}
+        - {x: -54.2883, y: -44.1774}
+        - {x: -32.2883, y: -48.1774}
+        - {x: 31.7117, y: -48.1774}
+        - {x: 64.7117, y: -19.177399}
+        - {x: 64.7117, y: 18.822601}
+        - {x: 28.7117, y: 63.8226}
+    - name: ArrowStars_4
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 1784
+        width: 377
+        height: 697
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14.885498, y: 155.4259}
+        - {x: -26.114502, y: 155.4259}
+        - {x: -29.114502, y: 150.4259}
+        - {x: -90.1145, y: 5.4259033}
+        - {x: -90.1145, y: -37.574097}
+        - {x: -38.114502, y: -153.5741}
+        - {x: -20.114502, y: -153.5741}
+        - {x: 73.8855, y: -34.574097}
+        - {x: 73.8855, y: 15.425903}
+        - {x: 41.885498, y: 147.4259}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,252 @@
+fileFormatVersion: 2
+guid: a6a4a507d1b06c24c97d7a90510fce85
+timeCreated: 1450136551
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MISC_0
+    21300002: MISC_1
+    21300004: MISC_2
+    21300006: MISC_3
+    21300008: MISC_4
+    21300010: MISC_5
+    21300012: MISC_6
+    21300014: MISC_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 450
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: MISC_0
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 2284
+        width: 648
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -174.41975, y: -28.388672}
+        - {x: 147.58025, y: -28.388672}
+        - {x: 147.58025, y: 39.61133}
+        - {x: -167.41975, y: 39.61133}
+        - {x: -174.41975, y: 23.611328}
+    - name: MISC_1
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 1628
+        width: 398
+        height: 373
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 32.173004, y: 76.89197}
+        - {x: -30.826996, y: 76.89197}
+        - {x: -76.826996, y: 47.891968}
+        - {x: -76.826996, y: -59.108032}
+        - {x: -61.826996, y: -77.10803}
+        - {x: 28.173004, y: -77.10803}
+        - {x: 75.173004, y: -59.108032}
+        - {x: 81.173004, y: -38.108032}
+        - {x: 81.173004, y: 29.891968}
+        - {x: 63.173004, y: 71.89197}
+    - name: MISC_2
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 1710
+        width: 750
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 184.5202, y: 31.294373}
+        - {x: -199.4798, y: 31.294373}
+        - {x: -199.4798, y: -10.705627}
+        - {x: -139.4798, y: -23.705627}
+        - {x: 154.5202, y: -23.705627}
+        - {x: 190.5202, y: 6.2943726}
+        - {x: 190.5202, y: 27.294373}
+    - name: MISC_3
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 940
+        width: 521
+        height: 398
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -68.311646, y: 70.588745}
+        - {x: -112.311646, y: 56.588745}
+        - {x: -112.311646, y: 10.588745}
+        - {x: -53.311646, y: -76.411255}
+        - {x: -21.311646, y: -103.411255}
+        - {x: 111.688354, y: -103.411255}
+        - {x: 134.68835, y: -99.411255}
+        - {x: 134.68835, y: -46.411255}
+        - {x: 63.688354, y: 70.588745}
+      - - {x: -34.311646, y: -86.411255}
+        - {x: -37.311646, y: -89.411255}
+        - {x: -37.311646, y: -91.411255}
+        - {x: -35.311646, y: -93.411255}
+        - {x: -32.311646, y: -93.411255}
+        - {x: -30.311646, y: -91.411255}
+        - {x: -30.311646, y: -89.411255}
+        - {x: -33.311646, y: -86.411255}
+    - name: MISC_4
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 838
+        width: 287
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33.509644, y: 68.75888}
+        - {x: -74.50964, y: 60.75888}
+        - {x: -74.50964, y: -5.2411194}
+        - {x: -51.509644, y: -71.24112}
+        - {x: 75.49036, y: -71.24112}
+        - {x: 75.49036, y: 40.75888}
+        - {x: 54.490356, y: 68.75888}
+    - name: MISC_5
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 305
+        width: 266
+        height: 389
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.800049, y: 106.39316}
+        - {x: -73.19995, y: 40.393158}
+        - {x: -73.19995, y: -17.606842}
+        - {x: -40.19995, y: -101.60684}
+        - {x: 40.80005, y: -101.60684}
+        - {x: 47.80005, y: -43.606842}
+        - {x: 47.80005, y: 106.39316}
+    - name: MISC_6
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 252
+        width: 332
+        height: 1176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 47.080246, y: -0.71450806}
+        - {x: 27.080246, y: -41.714508}
+        - {x: 15.080246, y: -95.71451}
+        - {x: 30.080246, y: -8.714508}
+        - {x: 65.080246, y: 60.285492}
+        - {x: 80.080246, y: 115.28549}
+        - {x: 80.080246, y: 192.28549}
+        - {x: 78.080246, y: 203.28549}
+        - {x: 80.080246, y: 248.28549}
+        - {x: 80.080246, y: 331.2855}
+        - {x: -86.919754, y: 331.2855}
+        - {x: -86.919754, y: -186.71451}
+        - {x: -32.919754, y: -327.7145}
+        - {x: -28.919754, y: -332.7145}
+        - {x: -16.919754, y: -327.7145}
+        - {x: -13.919754, y: -313.7145}
+        - {x: -16.919754, y: -312.7145}
+        - {x: -9.919754, y: -286.7145}
+        - {x: -7.919754, y: -278.7145}
+        - {x: -1.919754, y: -250.71451}
+        - {x: -8.919754, y: -283.7145}
+        - {x: -12.919754, y: -300.7145}
+        - {x: -12.919754, y: -329.7145}
+        - {x: -10.919754, y: -333.7145}
+        - {x: 38.080246, y: -333.7145}
+        - {x: 80.080246, y: -284.7145}
+        - {x: 80.080246, y: -118.71451}
+        - {x: 60.080246, y: 10.285492}
+      - - {x: 9.080246, y: 208.28549}
+        - {x: 7.080246, y: 206.28549}
+        - {x: 7.080246, y: 204.28549}
+        - {x: 9.080246, y: 202.28549}
+        - {x: 11.080246, y: 202.28549}
+        - {x: 13.080246, y: 204.28549}
+        - {x: 13.080246, y: 206.28549}
+        - {x: 11.080246, y: 208.28549}
+    - name: MISC_7
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 264
+        width: 418
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 92.42221, y: 27.94194}
+        - {x: 12.422211, y: 27.94194}
+        - {x: -80.57779, y: 18.94194}
+        - {x: -102.57779, y: -15.05806}
+        - {x: -102.57779, y: -33.05806}
+        - {x: -99.57779, y: -39.05806}
+        - {x: 70.42221, y: -39.05806}
+        - {x: 99.42221, y: -36.05806}
+        - {x: 104.42221, y: -18.05806}
+        - {x: 104.42221, y: 18.94194}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

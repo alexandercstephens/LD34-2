@@ -11,6 +11,8 @@ public class npcScript : MonoBehaviour {
     public Transform player;
     public Text spaceInstructions;
     public Text npctext;
+    public LieCounter lieCounter;
+    public GameObject arrow;
 
     bool hasBeenLiedTo = false;
     int responseIndex = 0;
@@ -29,6 +31,8 @@ public class npcScript : MonoBehaviour {
                 InvokeRepeating("GiveThanks", 1.5f, 3f);
                 Invoke("CancelPlayerText", 1.5f);
                 nose.GrowNose(15);
+                lieCounter.Lie();
+                Destroy(arrow);
             }
             spaceInstructions.enabled = true;
             isSpaceEnabled = true;

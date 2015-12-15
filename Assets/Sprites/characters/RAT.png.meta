@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: 7a3e30e4a6b55dd44a80964fc0c70031
+timeCreated: 1450139116
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: RAT_0
+    21300002: RAT_1
+    21300004: RAT_2
+    21300006: RAT_3
+    21300008: RAT_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1200
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: RAT_0
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1895
+        width: 1078
+        height: 475
+      alignment: 9
+      pivot: {x: 0.834461, y: 0.51725125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -179.48413, y: -75.763916}
+        - {x: -134.48413, y: -89.763916}
+        - {x: -78.48413, y: -101.763916}
+        - {x: -24.48413, y: -95.763916}
+        - {x: -5.484131, y: -86.763916}
+        - {x: 17.51587, y: -66.763916}
+        - {x: 46.51587, y: -18.763916}
+        - {x: 48.51587, y: -29.763916}
+        - {x: 54.51587, y: -34.763916}
+        - {x: 63.51587, y: -24.763916}
+        - {x: 82.51587, y: 8.236084}
+        - {x: 82.51587, y: 11.236084}
+        - {x: 73.51587, y: 21.236084}
+        - {x: 82.51587, y: 33.236084}
+        - {x: 82.51587, y: 41.236084}
+        - {x: 63.51587, y: 50.236084}
+        - {x: 41.51587, y: 41.236084}
+        - {x: 28.51587, y: 38.236084}
+        - {x: 7.515869, y: 73.236084}
+        - {x: -24.48413, y: 100.236084}
+        - {x: -81.48413, y: 111.236084}
+        - {x: -108.48413, y: 108.236084}
+        - {x: -182.48413, y: 78.236084}
+        - {x: -215.48413, y: 80.236084}
+        - {x: -261.48413, y: 79.236084}
+        - {x: -348.48413, y: 121.236084}
+        - {x: -369.48413, y: 118.236084}
+        - {x: -397.48413, y: 129.23608}
+        - {x: -419.48413, y: 129.23608}
+        - {x: -454.48413, y: 114.236084}
+        - {x: -487.48413, y: 74.236084}
+        - {x: -507.48413, y: 32.236084}
+        - {x: -507.48413, y: -16.763916}
+        - {x: -506.48413, y: -33.763916}
+        - {x: -489.48413, y: -80.763916}
+        - {x: -475.48413, y: -107.763916}
+        - {x: -450.48413, y: -126.763916}
+        - {x: -424.48413, y: -136.76392}
+        - {x: -382.48413, y: -136.76392}
+        - {x: -334.48413, y: -122.763916}
+        - {x: -303.48413, y: -97.763916}
+        - {x: -217.48413, y: -79.763916}
+      - - {x: 78.51587, y: -12.763916}
+        - {x: 80.51587, y: -14.763916}
+        - {x: 83.51587, y: -13.763916}
+        - {x: 83.51587, y: -10.763916}
+        - {x: 81.51587, y: -8.763916}
+        - {x: 78.51587, y: -9.763916}
+    - name: RAT_1
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1518
+        width: 496
+        height: 369
+      alignment: 9
+      pivot: {x: 0.4339169, y: 0.83310145}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48.279663, y: 37.488586}
+        - {x: 9.279663, y: 37.488586}
+        - {x: -71.72034, y: 13.488586}
+        - {x: -78.72034, y: -34.511414}
+        - {x: -78.72034, y: -95.51141}
+        - {x: -62.720337, y: -111.51141}
+        - {x: -46.720337, y: -122.51141}
+        - {x: 21.279663, y: -122.51141}
+        - {x: 83.27966, y: -116.51141}
+        - {x: 131.27966, y: -81.51141}
+        - {x: 131.27966, y: -16.511414}
+        - {x: 80.27966, y: 20.488586}
+    - name: RAT_2
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 2386
+        width: 385
+        height: 357
+      alignment: 9
+      pivot: {x: 0.21266757, y: 0.121272236}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.793823, y: 38.573975}
+        - {x: -20.793823, y: -24.426025}
+        - {x: 21.206177, y: -24.426025}
+        - {x: 138.20618, y: 146.57397}
+        - {x: 138.20618, y: 175.57397}
+        - {x: 102.20618, y: 175.57397}
+        - {x: 17.206177, y: 155.57397}
+    - name: RAT_3
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 2141
+        width: 385
+        height: 184
+      alignment: 9
+      pivot: {x: 0.87246794, y: 0.43319836}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -174.2842, y: 52.660522}
+        - {x: -175.2842, y: 46.660522}
+        - {x: -175.2842, y: -34.339478}
+        - {x: -151.2842, y: -36.339478}
+        - {x: -7.284195, y: -36.339478}
+        - {x: 29.715805, y: -23.339478}
+        - {x: 29.715805, y: 22.660522}
+        - {x: 5.715805, y: 52.660522}
+    - name: RAT_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1870
+        width: 389
+        height: 230
+      alignment: 9
+      pivot: {x: 0.81597537, y: 0.48218623}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -163.29614, y: 56.657104}
+        - {x: -163.29614, y: -41.342896}
+        - {x: 16.703857, y: -41.342896}
+        - {x: 35.703857, y: -38.342896}
+        - {x: 35.703857, y: 29.657104}
+        - {x: -27.296143, y: 56.657104}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
